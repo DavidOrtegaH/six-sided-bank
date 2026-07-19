@@ -1,0 +1,50 @@
+flowchart TD
+    %% Actores principales
+    cliente["👤 Cliente"]
+    administrador["⚙️ Administrador"]
+
+    subgraph Banco ["🏦 Sistema Bancario"]
+        
+        %% BLOQUE CLIENTES: Organizado en cuadrícula estrecha
+        subgraph ModCliente ["Área de Clientes"]
+            loginC["Iniciar sesión"]
+            
+            %% Fila 1 de opciones
+            crearCuenta["Crear cuenta"]
+            consultarDatos["Consultar datos"]
+            
+            %% Fila 2 de opciones
+            enviarDinero["Enviar dinero"]
+            consultarMov["Movimientos"]
+            
+            logoutC["Cerrar sesión"]
+
+            %% Conexiones distribuidas para no ensanchar   
+            loginC --> consultarDatos
+            loginC --> consultarMov
+            loginC --> logoutC
+            loginC --> enviarDinero
+        end
+
+        %% Separador vertical invisible entre módulos
+        
+
+        %% BLOQUE ADMINISTRACIÓN: Organizado de forma compacta
+        subgraph ModAdmin ["Área de Administración"]
+            loginA["Iniciar sesión"]
+            bloquearCuenta["Bloquear cuenta"]
+            borrarCuenta["Borrar cuenta"]
+            logoutA["Cerrar sesión"]
+
+            %% Estructura compacta de admin
+            loginA --> bloquearCuenta
+            loginA --> borrarCuenta
+            loginA --> logoutA
+        
+        end
+    end
+
+    %% Conexiones externas limpias
+    cliente --> loginC
+    cliente --> crearCuenta
+    administrador --> loginA

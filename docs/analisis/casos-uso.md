@@ -36,8 +36,58 @@ El cliente puede abrir una nueva cuenta bancaria.
 - El cliente posee una cuenta en el sistema bancario.
 - El cliente puede iniciar sesión en su cuenta del banco.
 
+## CU-002 - Iniciar sesión
+
+### Descripción
+Los clientes y los administradores de Six-Sided-Bank que poseen una cuenta necesitan poder hacer login en la misma.
+
+### Actores
+Cliente y administrador.
+
+### Objetivos
+El cliente y el administrador pueden hacer login en su porpia cuenta.
+
+### Precondiciones
+- El cliente o administrador debe existir.
+- El cliente o administrador debe ser humano.
+- La cuenta no tiene que estar bloqueada o cerrada.
+
+### Flujo principal
+1. El cliente o administrador solicita iniciar sesión.
+2. El cliente rellena formularios con nombre y contraseña.
+3. El sistema valida el login.
+4. La sesión se inicia correctamente.
+
+### Postcondiciones
+- El cliente o administrador tiene la sesión iniciada en su cuenta.
+
+
+## CU-003 - Cerrar sesión
+
+### Descripción
+La entidad bancaria "Six-Sided Bank" deberá permitir a aquellos con la sesión iniciada hacer logout.
+
+### Actores
+Cliente y administrador.
+
+### Objetivos
+Los administradores y clientes son capaces de cerrar sesión en su cuenta.
+
+### Precondiciones
+- El cliente o administrador debe existir.
+- El cliente o administrador debe ser humano.
+- El cliente o administrador ha de tener la sesión iniciada.
+
+### Flujo principal
+1. El cliente o administrador pide cerrar sesión.
+2. El sistema hace logout en esa cuenta.
+
+### Postcondiciones
+- El cliente o administrador tiene la sesión de su cuenta cerrada.
+- El cliente o administrador no puede operar hasta que no inicie sesión nuevamente.
+
 --- 
-## CU-002 - Consultar datos de cuenta bancaria
+## CU-004 - Consultar datos de cuenta bancaria
 
 ### Descripción
 El usuario necesita acceder los datos de su cuenta bancaria.
@@ -61,7 +111,7 @@ Cliente.
 
 ---
 
-## CU-003 - Enviar dinero
+## CU-005 - Enviar dinero
 
 ### Descripción
 Los clientes tienen que poder mandar dinero a otras cuentas bancarias.
@@ -96,7 +146,7 @@ Cliente.
 - Transferencia completada
 
 ---
-## CU-004 - Consultar movimientos
+## CU-006 - Consultar movimientos
 
 ### Descripción
 Los clientes quieren consultar los movimientos bancarios, ya sean ingresos o pagos, relacionados con su cuenta bancaria.
@@ -120,7 +170,7 @@ Cliente.
 - El cliente visualiza los movimientos efectuados relacionados con su cuenta.
 
 ---
-## CU-005 - Consultar la lista de clientes
+## CU-006 - Consultar la lista de clientes
 
 ### Descripción
 Los administradores necesitan acceder a la lista de clientes para revisar los datos de los susodichos.
@@ -146,7 +196,7 @@ Administrador.
 
 ---
 
-## CU-006 - Bloquear cuenta
+## CU-007 - Bloquear cuenta
 
 ### Descripción
 Los administradores necesitan poder bloquear las cuentas de los clientes por razones legales como procesos judiciales que exigan que una persona en particular tenga todas sus cuentas bloqueadas.
@@ -176,7 +226,7 @@ Administrador.
 
 ---
 
-## CU-007 - Borrar cuenta de clientes
+## CU-008 - Borrar cuenta de clientes
 
 ### Descripción
 Los administradores han de poder eliminar las cuentas de uno o varios clientes en caso de que la situación lo requiera.
