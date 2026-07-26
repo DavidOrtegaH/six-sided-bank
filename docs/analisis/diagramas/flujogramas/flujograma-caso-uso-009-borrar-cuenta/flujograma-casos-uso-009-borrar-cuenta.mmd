@@ -1,0 +1,17 @@
+flowchart TD
+    A(( )) --> B{"¿Tiene la sesión de administrador iniciada?"} 
+    B--> |Sí| C("El administrador selecciona borrar cuentas") 
+    B--> |No| D("Redirección al inicio de sesión")
+    C--> E("El administrador rellena el formulario de borrado de cuentas")
+    E--> F{"¿Los datos son correctos?"}
+    F--> |Sí| G("El sistema procede a eliminar la/s cuenta/s")
+    F--> |No| H("Se muestra por pantalla un mensaje de error")
+    H--> E
+    G--> I{"¿Se borraron las cuentas con éxito?"}
+    I--> |Sí| J("Se confirma por pantalla la eliminación de la/s cuenta/s")
+    I--> |No| H
+    D--> Z((( )))
+    J --> Z
+
+ style A fill:#000000,stroke:#000000,color:#ffffff
+ style Z fill:#000000,stroke:#000000,color:#ffffff
