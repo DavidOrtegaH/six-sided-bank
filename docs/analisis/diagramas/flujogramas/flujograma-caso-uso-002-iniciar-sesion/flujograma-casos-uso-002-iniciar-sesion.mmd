@@ -1,0 +1,13 @@
+flowchart TD
+    A(( )) --> B{"¿Ya es cliente?"} 
+    B--> |Sí| C("Inicio de sesión") 
+    B--> |No| D("Creación de cuenta")
+    D--> Z((( )))
+    C--> E("Rellenar formulario de inicio de sesión")
+    E--> F{"¿Los datos son válidos?"}
+    F--> |Sí| G(Sesión iniciada con éxito)
+    F--> |No| E
+    G --> Z
+
+ style A fill:#000000,stroke:#000000,color:#ffffff
+ style Z fill:#000000,stroke:#000000,color:#ffffff

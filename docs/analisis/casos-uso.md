@@ -170,7 +170,7 @@ Cliente.
 - El cliente visualiza los movimientos efectuados relacionados con su cuenta.
 
 ---
-## CU-006 - Consultar la lista de clientes
+## CU-007 - Consultar la lista de clientes
 
 ### Descripción
 Los administradores necesitan acceder a la lista de clientes para revisar los datos de los susodichos.
@@ -196,7 +196,7 @@ Administrador.
 
 ---
 
-## CU-007 - Bloquear cuenta
+## CU-008 - Bloquear cuenta
 
 ### Descripción
 Los administradores necesitan poder bloquear las cuentas de los clientes por razones legales como procesos judiciales que exigan que una persona en particular tenga todas sus cuentas bloqueadas.
@@ -226,7 +226,7 @@ Administrador.
 
 ---
 
-## CU-008 - Borrar cuenta de clientes
+## CU-009 - Borrar cuenta de cliente
 
 ### Descripción
 Los administradores han de poder eliminar las cuentas de uno o varios clientes en caso de que la situación lo requiera.
@@ -244,7 +244,7 @@ Administrador.
 
 ### Flujo principal
 1. El administrador solicita borrar una o varias cuentas.
-2. El administrador introduce el número o los números de la cuentas a borrar.
+2. El administrador introduce el número o los números de las cuentas a borrar.
 3. El administrador indica a que número de cuenta enviar el dinero que hubiera en las cuentas.
 4. El sistema verifica que las cuenta a borrar existan.
 5. El sistema recopila las cuentas que han de borrarse.
@@ -260,3 +260,33 @@ Administrador.
 - Sí el cliente no tenía más cuentas es borrado también.
 - El dinero que había en las cuentas borradas se sumó al saldo de la cuenta elegida por el administrador.
 
+## CU-010 - Restaurar cuenta de cliente
+
+### Descripción
+Los administradores han de poder restaurar las cuentas de uno o varios clientes en caso de que la situación lo requiera.
+
+### Actor
+Administrador.
+
+### Objetivos
+- El administrador tiene la capacidad de restaurar la/s cuenta/s de tipo cliente.
+- Una vez completado el proceso de restauración la cuenta debe ser utilizable nuevamente.
+
+### Precondiciones
+- El administrador debe haber iniciado sesión.
+- Las cuenta debe de existir.
+- La cuenta ha de estar bloqueda.
+- La cuenta no ha sido borrada.
+
+### Flujo principal
+1. El administrador solicita restaurar una o varias cuentas.
+2. El administrador introduce el número o los números de las cuentas a restaurar.
+3. El administrador indica a que número de cuenta enviar el dinero que hubiera en las cuentas.
+4. El sistema verifica que las cuenta a borrar existan y están bloquedas.
+5. El sistema recopila las cuentas bloqueadas seleccionadas.
+6. El sistema restaura todas las cuentas de la lista.
+7.  El sistema muestra al administrador que la operación fue un éxito.
+
+### Postcondiciones
+- La cuenta del cliente dejo de estar bloqueada.
+- La cuenta del cliente es usable nuevamente.
