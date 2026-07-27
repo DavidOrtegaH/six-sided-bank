@@ -1,0 +1,44 @@
+erDiagram
+      CLIENT {
+        UUID id PK
+        string dni UK
+        string firstName
+        string lastName
+        string email UK
+        string password
+        boolean enabled
+        datetime createdAt
+    }
+
+    ACCOUNT {
+        UUID id PK
+        string iban UK
+        decimal balance
+        string accountType
+        string status
+        datetime createdAt
+    }
+
+    ADMINISTRATOR {
+        UUID id PK
+        string dni UK
+        string firstName
+        string lastName
+        string email UK
+        string password
+        boolean enabled
+        datetime createdAt
+    }
+
+    TRANSACTION {
+        UUID id PK
+        decimal amount
+        string concept
+        string type
+        datetime operationDate
+        decimal balanceAfterOperation
+    }
+
+
+    CLIENT ||--o{ ACCOUNT : owns
+    ACCOUNT ||--o{ TRANSACTION : contains
