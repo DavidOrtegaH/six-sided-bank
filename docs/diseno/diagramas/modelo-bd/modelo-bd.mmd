@@ -1,0 +1,20 @@
+erDiagram
+%% Recopilamos las claves foraneas para la base de datos
+CLIENT {
+    UUID id PK
+    string dni UK
+}
+
+ACCOUNT {
+    UUID id PK
+    UUID client_id FK
+    string iban UK
+}
+
+TRANSACTION {
+    UUID id PK
+    UUID account_id FK
+}
+
+CLIENT ||--o{ ACCOUNT : client_id
+ACCOUNT ||--o{ TRANSACTION : account_id
