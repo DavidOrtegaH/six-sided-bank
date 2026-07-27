@@ -1,13 +1,13 @@
 flowchart TD
     A(( )) --> B{"¿Tiene la sesión de administrador iniciada?"} 
-    B--> |Sí| C("El administrador selecciona restaurar cuentas") 
+    B--> |Sí| C("El administrador selecciona desbloquear cuentas") 
     B--> |No| D("Redirección al inicio de sesión")
     C--> E("El administrador rellena el formulario de restauración de cuentas")
     E--> F{"¿Los datos son correctos?"}
-    F--> |Sí| G("El sistema procede a restaurar la/s cuenta/s")
+    F--> |Sí| G("El sistema procede a desbloquear la/s cuenta/s")
     F--> |No| H("Se muestra por pantalla un mensaje de error")
     H--> E
-    G--> I{"¿Se restauraron las cuentas con éxito?"}
+    G--> I{"¿Se desbloquearon las cuentas con éxito?"}
     I--> |Sí| J("Se confirma por pantalla restauración de la/s cuenta/s")
     I--> |No| H
     D--> Z((( )))

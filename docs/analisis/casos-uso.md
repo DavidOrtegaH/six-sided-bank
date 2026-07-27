@@ -221,8 +221,7 @@ Administrador.
 6. El sistema muestra al administrador que el bloqueo se realizó correctamente.
 
 ### Postcondiciones
-- La cuenta del cliente está bloqueda, no puede iniciar sesión ni operar con ella.
-
+- La cuenta queda bloqueada, el cliente no puede iniciar sesión ni operar con ella.
 
 ---
 
@@ -260,16 +259,16 @@ Administrador.
 - Sí el cliente no tenía más cuentas es borrado también.
 - El dinero que había en las cuentas borradas se sumó al saldo de la cuenta elegida por el administrador.
 
-## CU-010 - Restaurar cuenta de cliente
+## CU-010 - Desbloquear cuenta de cliente
 
 ### Descripción
-Los administradores han de poder restaurar las cuentas de uno o varios clientes en caso de que la situación lo requiera.
+Los administradores han de poder desbloquear las cuentas de uno o varios clientes en caso de que la situación lo requiera.
 
 ### Actor
 Administrador.
 
 ### Objetivos
-- El administrador tiene la capacidad de restaurar la/s cuenta/s de tipo cliente.
+- El administrador tiene la capacidad de desbloquear la/s cuenta/s de tipo cliente.
 - Una vez completado el proceso de restauración la cuenta debe ser utilizable nuevamente.
 
 ### Precondiciones
@@ -279,10 +278,10 @@ Administrador.
 - La cuenta no ha sido borrada.
 
 ### Flujo principal
-1. El administrador solicita restaurar una o varias cuentas.
-2. El administrador introduce el número o los números de las cuentas a restaurar.
+1. El administrador solicita desbloquear una o varias cuentas.
+2. El administrador introduce el número o los números de las cuentas a desbloquear.
 3. El administrador indica a que número de cuenta enviar el dinero que hubiera en las cuentas.
-4. El sistema verifica que las cuenta a borrar existan y están bloquedas.
+4. El sistema verifica que las cuenta a borrar existan y están bloqueadas.
 5. El sistema recopila las cuentas bloqueadas seleccionadas.
 6. El sistema restaura todas las cuentas de la lista.
 7.  El sistema muestra al administrador que la operación fue un éxito.
