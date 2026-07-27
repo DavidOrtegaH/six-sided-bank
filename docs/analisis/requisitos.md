@@ -111,39 +111,42 @@ Todas las transferencias deberán ejecutarse como una única transacción atómi
 #### RNF-005. 
 El sistema deberá garantizar la consistencia de los saldos bancarios.
 
+#### RNF-005.
+El sistema solo usa euros (€) como divisa para simplificar
+
 ---
 
 ## Rendimiento
 
-#### RNF-006. 
+#### RNF-007. 
 Las consultas de saldo y datos de cuenta deberán responder en menos de 2 segundos en condiciones normales.
 
-#### RNF-007. 
+#### RNF-008. 
 Las operaciones de transferencia deberán completarse en menos de 40 segundos sin comprometer la consistencia de los datos.
 
 ---
 
 ## Mantenibilidad
 
-#### RNF-008. 
+#### RNF-009. 
 La aplicación deberá desarrollarse siguiendo una arquitectura hexagonal.
 
-#### RNF-009. 
+#### RNF-010. 
 La lógica de negocio deberá estar desacoplada de la infraestructura.
 
-#### RNF-010. 
+#### RNF-011. 
 Los componentes deberán seguir el principio de responsabilidad única (SRP).
 
 ---
 
 ## Escalabilidad
 
-#### RNF-011. 
+#### RNF-012. 
 La arquitectura deberá permitir sustituir la base de datos o los mecanismos de persistencia sin modificar el dominio.
 
 ---
 
 ## Fiabilidad
 
-#### RNF-012. 
+#### RNF-013. 
 Ante un fallo durante una transferencia, la operación deberá revertirse completamente para evitar inconsistencias.
