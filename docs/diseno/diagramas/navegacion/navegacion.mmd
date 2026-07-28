@@ -1,0 +1,16 @@
+flowchart TD
+
+Landing["Landing page"]--> Login["Inicio de sesión"]
+Login --> |Es cliente| MainMenu["Menú principal"]
+Login --> |Es administrador| AdminMenu["Menú de administrador"]
+Login --> |Necesita crearse la cuenta|Register["Registro de cuenta"]
+MainMenu --> AccountDetails["Detalles de la cuenta"]
+MainMenu --> Transfer["Menú para hacer trasnferencias"]
+MainMenu --> TransactionHistory["Historial de transacciones"]
+AdminMenu --> AccountDetails
+AdminMenu --> ClientsList["Lista de clientes y sus cuentas"]
+AdminMenu --> BanForm["Formulario para bloquear cuentas"]
+AdminMenu --> DeleteForm["Formulario para eliminar cuentas"]
+AdminMenu --> UnbanForm["Formulario para desbloquear cuentas"]
+
+
